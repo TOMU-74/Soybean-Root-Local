@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  calibration_app:
+    build: .
+    # ローカルのディレクトリをコンテナ内にマウント
+    volumes:
+      # プログラムファイルがあるディレクトリ全体をマウント
+      - .:/app
+    # プログラムの実行コマンド
+    command: ["python", "Calibration.py"]
